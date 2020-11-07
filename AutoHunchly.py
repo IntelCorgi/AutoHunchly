@@ -1,31 +1,30 @@
 import selenium
+import time
+import random
 from selenium import webdriver
+
+# Selects chrome to be the browser
 driver = webdriver.Chrome()
+
 # Introduction
 print("Welcome to AutoHunchly.")
 
-
-
-# Iterate domains in txt file
-# protocol = "https://"
-# with open("domains.txt", "r") as domains:
-#     domains_list = domains.read().splitlines()
-#     for domain in domains_list:
-#         hunchly_target = protocol + domain
-#         driver.get(domain)
-
-
+# Iterate through input file and assemble domains into a Selenium-friendly format.
 with open("domains.txt", "r") as file_input:
     domains_list = []
     for domain_raw in file_input:
-        domain_target = "https://" + domain_raw.rstrip()
-        domains_list.append(domain_target)
-print(domains_list)
+        domain_complete = "https://" + domain_raw.rstrip()
+        domains_list.append(domain_complete)
+   
+    # Use selenium to make requests
+    for domain_target in domains_list:
+        driver.get(domain_target)
+        # Print update as domains are archived
+        domain_update = domain_target.replace("https://www.", "")
+        print(f"Archiving {domain_update} ...")
+        # Random sleep
+        time.sleep(random.uniform(10, 20))
 
-# domains = ["https://disney.com", "https://cnn.com"]
-# for domain in domains:
-#     driver.get(domain)
-            
-    #except:
-
-    #driver.quit()
+# Notification that the archiving is complete and shut down the driver
+print("Archiving complete! Check your Hunchly case.")
+driver.quit()
