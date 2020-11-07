@@ -3,8 +3,10 @@ import time
 import random
 from selenium import webdriver
 
-# Selects chrome to be the browser
-driver = webdriver.Chrome()
+# Enforces Chrome running in incognito mode
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--incognito")
+driver = webdriver.Chrome(chrome_options = chrome_options)
 
 # Introduction
 print("Welcome to AutoHunchly.")
