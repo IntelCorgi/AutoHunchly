@@ -6,7 +6,7 @@ from selenium import webdriver
 # Enforces Chrome running in incognito mode
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("--incognito")
-driver = webdriver.Chrome(chrome_options = chrome_options)
+driver = webdriver.Chrome(options = chrome_options)
 
 # Introduction
 print("Welcome to AutoHunchly.")
@@ -15,7 +15,7 @@ print("Welcome to AutoHunchly.")
 with open("domains.txt", "r") as file_input:
     domains_list = []
     for domain_raw in file_input:
-        domain_complete = "https://" + domain_raw.rstrip()
+        domain_complete = "https://www." + domain_raw.rstrip()
         domains_list.append(domain_complete)
    
     # Use selenium to make requests
