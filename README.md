@@ -11,10 +11,7 @@ Manually archiving webpages as a part of an investigation can be a major pain, e
 
     Hunchly captures all web pages in the MHTML format. 
     
-    This format is very similar to how emails are structured, 
-    
-    they contain headers with information describing the page itself, 
-    
+    This format is very similar to how emails are structured, they contain headers with information describing the page itself, 
     the timestamp of when Chrome itself captured the page and it also includes all of the text, CSS styles and images that are contained on the page. All in a single file. 
     
     This is superior to PDF or screenshots as all links are maintained, the layout is generally more accurate and all metadata is preserved including the metadata in the captured images.
