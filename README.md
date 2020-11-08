@@ -9,7 +9,15 @@ Manually archiving webpages as a part of an investigation can be a major pain, e
 ### How Hunchly Works
 [Hunchly](www.hunch.ly) is (IMO) one of the best tools in an investigator's arsenal. While an analyst investigates suspicious or malicious domains, Hunchly archives a copy of the page. From the [Hunchly Evidence Guide:](https://www.hunch.ly/resources/Hunchly%20Evidence%20Guide.pdf)
 
-    Hunchly captures all web pages in the MHTML format. This format is very similar to how emails are structured, they contain headers with information describing the page itself, the timestamp of when Chrome itself captured the page and it also includes all of the text, CSS styles and images that are contained on the page. All in a single file. This is superior to PDF or screenshots as all links are maintained, the layout is generally more accurate and all metadata is preserved including the metadata in the captured images.
+    Hunchly captures all web pages in the MHTML format. 
+    
+    This format is very similar to how emails are structured, 
+    
+    they contain headers with information describing the page itself, 
+    
+    the timestamp of when Chrome itself captured the page and it also includes all of the text, CSS styles and images that are contained on the page. All in a single file. 
+    
+    This is superior to PDF or screenshots as all links are maintained, the layout is generally more accurate and all metadata is preserved including the metadata in the captured images.
 
 As investigations become more complex as pivots are made, all the pages are collected in a central case file, along with user defined selectors, metadata, and other handy things. Hunchly also allows an analyst to generate a customized a report.
 
