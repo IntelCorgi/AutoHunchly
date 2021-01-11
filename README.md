@@ -14,7 +14,7 @@ The chrome instances spawned by selenium are not the same as your regular chrome
 
 
 ## What is AutoHunchly?
-Manually archiving webpages as a part of an investigation can be a major pain, especially when you have a list of over 100 domains on your to do list. AutoHunchly is a simple python script which uses Selenium to manually navigate to a ueser-supplied list of target webpages. The webpages will be captured in Hunchly as if the user was taking the time to navigate to each one. The analyst can then further analyze the webpages within Hunchly or retain them for archiving/future analysis.
+Manually archiving webpages as a part of an investigation can be a major pain, especially when you have a list of over 100 domains on your to do list. AutoHunchly is a simple python script which uses Selenium to manually navigate to a user-supplied list of target webpages. The webpages will be captured in Hunchly as if the user was taking the time to navigate to each one. The analyst can then further analyze the webpages within Hunchly or retain them for archiving/future analysis.
 
 ### How Hunchly Works
 [Hunchly](www.hunch.ly) is (IMO) one of the best tools in an investigator's arsenal. While an analyst investigates suspicious or malicious domains, Hunchly archives a copy of the page. From the [Hunchly Evidence Guide:](https://www.hunch.ly/resources/Hunchly%20Evidence%20Guide.pdf)
