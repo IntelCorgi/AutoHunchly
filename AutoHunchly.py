@@ -25,7 +25,14 @@ with open("domains.txt", "r") as file_input:
         domain_update = domain_target.replace("https://www.", "")
         print(f"Archiving {domain_update} ...")
         # Random sleep
-        time.sleep(random.uniform(10, 20))
+        #time.sleep(random.uniform(10, 20))
+        #workaround
+        if domain_target == "https://www.disney.com":
+            time.sleep(60)
+        else:
+            time.sleep(random.uniform(10, 20))
+
+
 
 # Notification that the archiving is complete and shut down the driver
 print("Archiving complete! Check your Hunchly case.")

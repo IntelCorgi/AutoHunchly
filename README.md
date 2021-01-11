@@ -3,6 +3,16 @@ A python script for automating the collection of web pages with [Hunchly](www.hu
 
 _Note: I am not affiliated with the Hunchly team in any way!_
 
+## Work in Progress Update 01/11/2021
+The chrome instances spawned by selenium are not the same as your regular chrome browser. So even though you have the hunchly extension in your normal browser, when you run AutoHunchly it will not spawn a browser with the extension enabled and set up. Until I can figure out how to get a hunhcly crx file for selenium to load, a temporary workaround is to have "disney.com" (just a random stable website, change this to whatever you want) as your first domain. This will cause AutoHunchly to wait 60 seconds before proceeding with the script, so you will need to perform the following actions:
+
+1) in the spawned chrome browser, go to "chrome:settings"
+2) click "extensions" in the bottom of the left hand menu
+3) click the link in the middle of the screen to go to the chrome extension webstore. Then just download Hunchly
+4) click on the puzzle piece that appears in the area extensions usually are. Click the pin for hunchly and set the capture to "on". 
+5) visit the extension settings, and ensure Hunchly has permissions to capture files while Chrome is in incognito.
+
+
 ## What is AutoHunchly?
 Manually archiving webpages as a part of an investigation can be a major pain, especially when you have a list of over 100 domains on your to do list. AutoHunchly is a simple python script which uses Selenium to manually navigate to a ueser-supplied list of target webpages. The webpages will be captured in Hunchly as if the user was taking the time to navigate to each one. The analyst can then further analyze the webpages within Hunchly or retain them for archiving/future analysis.
 
